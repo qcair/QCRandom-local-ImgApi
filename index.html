@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="author" content="Xlch">
+		<title>倾丞随机二次元图片API本地版</title>
+  		<link rel="shortcut icon" href="./favicon.ico">
+		<meta name="keywords" content="倾丞随机二次元图片API,随机图片API,随机图片接口,随机图片,随机图片api源码,随机图片链接,二次元图片,高清图片,二次元API,动漫图片API,图片API">
+		<meta name="description" content="倾丞随机二次元图片API,随机动漫壁纸,24小时稳定运行，手机电脑平板一站通用，超多图片类型不定期更新，快来一起使用吧！">
+		<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="main.css?ver=1.0">
+		<script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+        <script src="//lib.baomitu.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+	</head>
+	<body>
+		<div>
+			<p class="title title2">二次元图片API本地版</p>
+		</div>
+		<div class="container">
+			<div class="well">
+				<p>目前系统共收录 150+ 张图片 API最后更新时间:2020-08-08</p>
+			    <p>二次元壁纸-图片默认均为https，高速访问</p>
+			    <pre>API累计已调用：<font color="#ff0000" id="ApiResult"></font>次</pre>
+			    <p>二次元壁纸API基本调用格式：</p>
+				<pre>http://你的域名/wallpaper.php</pre>
+				<p>参数：</p>
+				<pre>return=json/img/url/http/https/xml/baes64Img/base64Code</pre>
+				<p>JSON调用格式</p>
+                <pre>https://你的域名/wallpaper.php?return=json</pre>
+				<p>XML调用格式</p>
+                <pre>https://你的域名/wallpaper.php?return=xml</pre>
+			</div>
+		</div>
+		<div class="bottom">
+        	<p> Copyright &copy; 2020 <a target="_black" href="//blog.qcair.cc" title="倾丞博客">倾丞博客</a> V1.0.16</p>
+        	<!-- 备案号:<a href="http://www.miibeian.gov.cn" target="_blank">xxICP备</a>-->
+        	<!-- 统计代码 -->
+		</div>
+			<!-- 读取API统计信息 -->
+	<script language="javascript">
+$(document).ready(function() {
+    $.ajax({
+        url: "./Main/wallpaper.txt",
+        success: function(result) {
+            $("#ApiResult").html(result);
+        }
+    });
+});
+</script>
+	</body>
+</html>
